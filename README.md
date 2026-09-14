@@ -1,81 +1,242 @@
 # 🛒 DZ Store | E-Commerce Web Application
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-3b82f6?style=for-the-badge&logo=vercel&logoColor=white)](https://e-dz.vercel.app/)
-[![Author](https://img.shields.io/badge/Author-Nidal15--ds-0f172a?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Nidal15-ds)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-3b82f6?style=for-the-badge\&logo=vercel\&logoColor=white)](https://e-dz.vercel.app/)
+[![Author](https://img.shields.io/badge/Author-Nidal15--ds-0f172a?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/Nidal15-ds)
 
 ## 📌 Project Overview
-**DZ Store** is a fully responsive, modern e-commerce web application tailored for the Algerian market. It features a curated catalog of traditional and contemporary menswear—including Qamiss (Thobes), sport shoes, t-shirts, watches, jackets, slacks, and exclusive multi-item bundle packs. Designed with clean UI/UX principles, the platform provides seamless product filtering, interactive cart management, dynamic search functionality, and a dedicated customer suggestion/product request system covering all 58 wilayas.
+
+**DZ Store** is a fully responsive e-commerce web application tailored for the Algerian market. It features a curated catalog of traditional and contemporary menswear, including Qamiss (Thobes), sport shoes, t-shirts, watches, jackets, slacks, and multi-item bundle packs.
+
+The application focuses on practical React development, clean UI/UX, reusable components, client-side routing, global state management, product filtering, dynamic search, and cart management.
+
+It also includes a customer suggestion/product request system covering all 58 wilayas of Algeria.
+
+---
+
+## ✨ Features
+
+* Responsive design for desktop, tablet, and mobile
+* Product catalog with multiple categories
+* Dynamic product search
+* Category filtering
+* Product sorting
+* Product details pages
+* Dynamic product routes
+* Shopping cart management
+* Add and remove products from cart
+* Update product quantities
+* Automatic cart total calculation
+* Customer suggestion/product request form
+* Wilaya selection covering all 58 Algerian wilayas
+* Mobile navigation drawer
+* Responsive UI with CSS animations and transitions
+* Client-side routing without full page reloads
 
 ---
 
 ## 🛠️ Tech Stack
-* **Frontend Library:** React.js (Functional Components)
-* **Routing:** React Router DOM (`useRoutes`, `Link`, `useSearchParams`)
-* **State Management & Context:** React Context API (`useContext`, Custom Hooks)
-* **Styling:** Modular CSS with CSS Variables and Flexbox/Grid responsive layouts
+
+* **Frontend Library:** React.js
+* **Routing:** React Router DOM
+* **State Management:** React Context API
+* **React Hooks:** `useState`, `useEffect`, `useContext`, `useParams`, `useSearchParams`
+* **Styling:** CSS, CSS Variables, Flexbox, CSS Grid, Media Queries
 * **Icons & UI Assets:** Custom SVG elements and vector iconography
+* **Deployment:** Vercel
 
 ---
 
-## 🧠 What I Learned & React Concepts Implemented
-Building this project deeply enhanced my practical mastery of core React architecture and modern frontend workflows:
+## 🧠 React Concepts Implemented
 
-* **React Hooks:**
-  * `useState`: Managed local component states for search filters, sorting options, interactive mobile hamburger menus, and multi-field form data inputs.
-  * `useEffect`: Synchronized document filtering states with URL parameters and handled timed alerts.
-  * `useContext` & Custom Hooks (`useCart`): Implemented global state management to share cart items and quantities smoothly across separate Navbar, Catalog, and Cart components without prop drilling.
-* **Routing & Navigation:** Utilized `react-router-dom` for client-side multi-page routing, dynamic product URL parameters (`useParams`), and query string manipulation (`useSearchParams`) for category filtering.
-* **Component-Based Architecture:** Broken down the UI into reusable, modular components (`Navbar`, `Footer`, `SuggestionBox`, Product Cards) to keep code clean and maintainable.
-* **State Immutability & Array Methods:** Leveraged modern JavaScript array methods (`filter`, `reduce`, `map`, `forEach`, `sort`) to handle cart calculations, pricing updates, and multi-criteria product filtering.
-* **Responsive Web Design:** Built custom CSS media queries and mobile drawer navigation with animated transitions and state toggling.
+This project was built to practice and apply core React concepts in a complete application.
+
+### React Hooks
+
+* `useState`
+
+  * Search state
+  * Filtering and sorting state
+  * Cart interactions
+  * Mobile navigation state
+  * Form state
+
+* `useEffect`
+
+  * Synchronizing application state with URL parameters
+  * Timed alerts and UI effects
+
+* `useContext`
+
+  * Global cart state
+  * Sharing cart data between components without prop drilling
+
+* Custom Hooks
+
+  * `useCart` for accessing cart functionality
+
+### Routing & Navigation
+
+* Client-side routing with `react-router-dom`
+* Dynamic product routes using `useParams`
+* Query parameters using `useSearchParams`
+* Navigation using `Link`
+* Route configuration using `useRoutes`
+
+### State Management
+
+* Array state
+* Object state
+* Immutable state updates
+* Derived state
+* Cart quantity management
+* Cart total calculations
+
+### JavaScript Array Methods
+
+Used extensively for application logic:
+
+* `map()`
+* `filter()`
+* `reduce()`
+* `sort()`
+* `forEach()`
+
+### Component Architecture
+
+The application is divided into reusable components and pages, including:
+
+* `Navbar`
+* `Footer`
+* `ProductCard`
+* `SuggestionBox`
+* Cart components
+* Product pages
+* Home page
+* Contact page
+
+### Responsive Design
+
+* CSS media queries
+* Flexbox
+* CSS Grid
+* Responsive navigation
+* Mobile drawer menu
+* Animated UI transitions
 
 ---
 
 ## 📂 Project Structure
+
 ```text
 dz-store/
-├── public/                # Static assets and public index
+├── public/
+│   └── assets/                  # Public static assets
+│
 ├── src/
-│   ├── components/        # Reusable UI parts (Navbar, Footer, SuggestionBox)
-│   ├── context/           # React Context state providers (CartContext)
-│   ├── data/              # Mock database objects (products.js)
-│   ├── pages/             # Route pages (Home, Products, ProductDetails, Cart, Contact)
-│   ├── App.jsx            # Main app router wrapper
-│   ├── App.css            # Global application styles
-│   └── main.js / index.js # Application entry point
-├── package.json           # Dependencies and project scripts
-└── README.md              # Project documentation
+│   ├── components/              # Reusable UI components
+│   │   ├── Navbar/
+│   │   ├── Footer/
+│   │   ├── ProductCard/
+│   │   └── SuggestionBox/
+│   │
+│   ├── context/                 # Global React state
+│   │   └── CartContext.jsx
+│   │
+│   ├── data/                    # Product data
+│   │   └── products.js
+│   │
+│   ├── pages/                   # Application pages
+│   │   ├── Home/
+│   │   ├── Products/
+│   │   ├── ProductDetails/
+│   │   ├── Cart/
+│   │   └── Contact/
+│   │
+│   ├── App.jsx                  # Main application component
+│   ├── App.css                  # Global application styles
+│   └── main.jsx                 # Application entry point
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
-🚀 Getting Started & Local Installation
+> Adjust the structure above to match the exact folders and files in your repository.
 
-To run this project locally on your machine, follow these simple steps:
-1. Clone the Repository
-Bash
+---
 
-git clone [https://github.com/Nidal15-ds/dz-store.git](https://github.com/Nidal15-ds/dz-store.git)
-cd dz-store
+## 🚀 Getting Started
 
-2. Install Dependencies
+### 1. Clone the Repository
 
-Make sure you have Node.js installed, then run:
-Bash
+```bash
+git clone https://github.com/Nidal15-ds/e-commerce-front-end.git
+cd e-commerce-front-end
+```
 
+### 2. Install Dependencies
+
+Make sure [Node.js](https://nodejs.org/) is installed.
+
+```bash
 npm install
+```
 
-3. Run on Localhost
+### 3. Start the Development Server
 
-Start the local development server:
-Bash
-
+```bash
 npm run dev
+```
 
-Open your browser and navigate to http://localhost:5173 (or the port specified in your terminal).
-🌐 Deployment
+The application will be available at the local URL displayed by Vite, usually:
 
-The project is continuously deployed and hosted live using Vercel:
+```text
+http://localhost:5173
+```
 
-    Live Demo: https://e-dz.vercel.app/
+---
 
-✍️ Author
+## 🌐 Deployment
 
-    Nidal Dous (Nidal15-ds)
+The application is deployed and hosted using **Vercel**.
+
+**Live Demo:**
+
+https://e-dz.vercel.app/
+
+The deployed application is automatically updated when changes are pushed to the connected GitHub repository.
+
+---
+
+
+
+## 🔮 Future Improvements
+
+Possible future improvements include:
+
+* Backend integration (django)
+* Real product database
+* User authentication
+* Product administration dashboard
+* Order management
+* Persistent shopping cart
+* Online payment integration
+* Product reviews and ratings
+* Real customer orders
+
+These features are not currently implemented and would require a backend/API.
+
+---
+
+## 👨‍💻 Author
+
+**Nidal Dous**
+
+* GitHub: [@Nidal15-ds](https://github.com/Nidal15-ds)
+* Live Project: [DZ Store](https://e-dz.vercel.app/)
+
+---
+
+## 📄 License
+
+This project was created for educational and portfolio purposes.
