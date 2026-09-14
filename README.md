@@ -13,24 +13,11 @@ It also includes a customer suggestion/product request system covering all 58 wi
 
 ---
 
-## ✨ Features
-
-* Responsive design for desktop, tablet, and mobile
-* Product catalog with multiple categories
-* Dynamic product search
-* Category filtering
-* Product sorting
-* Product details pages
-* Dynamic product routes
-* Shopping cart management
-* Add and remove products from cart
-* Update product quantities
-* Automatic cart total calculation
-* Customer suggestion/product request form
-* Wilaya selection covering all 58 Algerian wilayas
-* Mobile navigation drawer
-* Responsive UI with CSS animations and transitions
-* Client-side routing without full page reloads
+## ⚡ Core Features
+*Advanced Catalog & Filtering: Multi-category product browsing with real-time dynamic search, sorting options, and URL-synchronized category filtering.
+*Interactive Shopping Cart: Full cart management supporting quantity updates, item addition/removal, and automatic total price calculations.
+*Customer Interaction: Integrated product suggestion and request form featuring a custom-built Wilaya selection dropdown covering all 58 Algerian wilayas.
+*Responsive UI/UX: Fully adaptive layout across desktop, tablet, and mobile devices featuring an animated mobile navigation drawer, clean CSS transitions, and smooth client-side routing.
 
 ---
 
